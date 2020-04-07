@@ -15,3 +15,8 @@ Set up the test database:
 - Create the database using the `psql` command `CREATE DATABASE bookmark_manager;`
 - Connect to the database using the `pqsl` command `\c bookmark_manager;`
 - Run the query we have saved in the file `01_create_bookmarks_table.sql`
+
+
+As a user who wants to save content
+so that I can access it later
+I want to be able to create a bookmark for it
