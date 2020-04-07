@@ -1,6 +1,9 @@
-class BookmarkList
-  attr_reader :list
-  def initialize
-    @list = [1, 2]
+class Bookmark
+  def self.all
+    [
+      "http://www.makersacademy.com",
+      "http://www.destroyallsoftware.com",
+      "http://www.google.com"
+    ]
   end
 end
