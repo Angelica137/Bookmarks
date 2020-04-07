@@ -1,6 +1,15 @@
 feature 'Displays list of bookamrks' do
   scenario 'A user sees their bookmarks in a list' do
-    visit ('/bookmarks')
+    # Connect to test DB
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+
+    # Add the test data
+    connection.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');")
+    connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
+    connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
+
+    visit('/bookmarks')
+
     expect(page).to have_content "These are your bookmarks"
     expect(page).to have_content "http://www.makersacademy.com"
     expect(page).to have_content "http://www.destroyallsoftware.com"
