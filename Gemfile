@@ -1,5 +1,10 @@
 source "https://rubygems.org"
-require 'sinatra'
-require 'capybara'
-require 'rspec'
-require 'rubocop'
+
+gem 'pg'
+gem 'sinatra'
+
+group :test do
+  gem 'capybara'
+  gem 'rspec'
+  gem 'rubocop'
+end
