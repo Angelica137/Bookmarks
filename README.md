@@ -16,6 +16,10 @@ Set up the test database:
 - Connect to the database using the `pqsl` command `\c bookmark_manager_test;`
 - Run the query we have saved in the file `01_create_bookmarks_table.sql`
 
+Add 'title' column to 'bookmark_manager' and 'bookmark_manager_test' database tables (both required)
+1. Connect to `psql`
+2. Connect to the database using the `pqsl` command `\c bookmark_manager_test;` or `\c bookmark_manager;`
+3. Run the query we have saved in the file `02_add_title_to_bookmarks.sql`
 
 As a user who wants to save content
 so that I can access it later
