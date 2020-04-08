@@ -1,6 +1,10 @@
 <h1> These are your bookmarks </h1>
 <ul>
   <% @bookmarks.each do |bookmark| %>
-  <li><%= bookmark %></li>
+  <li>
+    <a href="<%= bookmark.url %>">
+      <%= bookmark.title %></li>
+    </a>
+    </li>
   <% end %>
 </ul>
