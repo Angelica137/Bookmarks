@@ -19,9 +19,8 @@ describe Bookmark do
     end
 
     it 'creates a new bookmark' do
-      Bookmark.create('https://github.com')
-      bookmarks = Bookmark.all
-      expect(bookmarks).to include('https://github.com')
+      Bookmark.create('https://github.com')    
+      expect(Bookmark.all).to include('https://github.com')
     end
   end
 end
