@@ -21,12 +21,12 @@ describe Bookmark do
     end
 
     it 'creates a new bookmark' do
-      bookmark = Bookmark.create(url: 'http://github.com', title: "Github")
+      bookmark = Bookmark.create(url: 'http://www.github.com', title: "Github")
       persisted_data = persisted_data(id: bookmark.id)
       
-      expect(bookmarks).to be_a Bookmark
-      expect(bookmarks.id).to eq persisted_data.first['id']
-      expect(bookmarks.title).to eq "Github"
+      expect(bookmark).to be_a Bookmark
+      expect(bookmark.id).to eq persisted_data['id']
+      expect(bookmark.title).to eq "Github"
       expect(bookmark.url).to eq "http://www.github.com"
     end
   end

@@ -22,7 +22,7 @@ class Bookmark
   end
 
   def self.create(url:, title:)
-    return false unless is_url?(url)
+    return false unless Bookmark.working_url?(url)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
@@ -32,5 +32,10 @@ class Bookmark
     Bookmark.new(id: result[0]['id'], url: result[0]['url'], title: result[0]['title'])
   end
 
-
+  def self.working_url?(url)
+    uri = URI.parse(url)
+    uri.is_a?(URI::HTTP) && !uri.host.nil?
+    rescue URI::InvalidURIError
+    false
+  end
 end
