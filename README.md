@@ -16,7 +16,11 @@ Set up the test database:
 - Connect to the database using the `pqsl` command `\c bookmark_manager_test;`
 - Run the query we have saved in the file `01_create_bookmarks_table.sql`
 
+How to add title to database
+- Alter
+
 
 As a user who wants to save content
 so that I can access it later
 I want to be able to create a bookmark for it
+
