@@ -1,17 +1,8 @@
 feature 'Displays list of bookamrks' do
   scenario 'A user sees their bookmarks in a list' do
-<<<<<<< HEAD
-
     Bookmark.create("http://www.makersacademy.com")
     Bookmark.create("http://www.destroyallsoftware.com")
     Bookmark.create("http://www.google.com")
-=======
-    
-    Bookmark.create("http://www.makersacademy.com")
-    Bookmark.create("http://www.destroyallsoftware.com")
-    Bookmark.create("http://www.google.com")
-
->>>>>>> e805b3a5c3e532cb1a5b080ec02db6a89de43507
 
     visit('/bookmarks')
 
