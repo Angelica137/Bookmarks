@@ -1,12 +1,9 @@
 feature 'Displays list of bookamrks' do
   scenario 'A user sees their bookmarks in a list' do
-    # Connect to test DB
-    connection = PG.connect(dbname: 'bookmark_manager_test')
 
-    # Add the test data
-    connection.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
+    Bookmark.create("http://www.makersacademy.com")
+    Bookmark.create("http://www.destroyallsoftware.com")
+    Bookmark.create("http://www.google.com")
 
     visit('/bookmarks')
 
