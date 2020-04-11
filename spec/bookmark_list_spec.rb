@@ -61,9 +61,9 @@ describe Bookmark do
       result = Bookmark.find(id: bookmark.id)
 
       expect(result).to be_a Bookmark
-      expect(updated_bookmark.id).to eq bookmark.id
-      expect(updated_bookmark.title).to eq 'Makers Academy'
-      expect(updated_bookmark.url).to eq 'http://www.makersacademy.com'
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Makers Academy'
+      expect(result.url).to eq 'http://www.makersacademy.com'
     end
   end
 end
